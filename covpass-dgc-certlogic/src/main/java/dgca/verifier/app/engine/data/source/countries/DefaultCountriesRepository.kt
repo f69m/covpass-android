@@ -23,7 +23,7 @@
 package dgca.verifier.app.engine.data.source.countries
 
 import dgca.verifier.app.engine.data.source.local.countries.CountriesLocalDataSource
-import dgca.verifier.app.engine.data.source.remote.countries.CountriesRemoteDataSrouce
+import dgca.verifier.app.engine.data.source.remote.countries.CountriesRemoteDataSource
 import kotlinx.coroutines.flow.Flow
 import java.util.*
 
@@ -49,7 +49,7 @@ import java.util.*
  * Created by osarapulov on 25.06.21 9:28
  */
 class DefaultCountriesRepository(
-    private val remoteDataSource: CountriesRemoteDataSrouce,
+    private val remoteDataSource: CountriesRemoteDataSource,
     private val localDataSource: CountriesLocalDataSource
 ) : CountriesRepository {
 

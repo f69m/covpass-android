@@ -43,6 +43,6 @@ package dgca.verifier.app.engine.data.source.remote.countries
  *
  * Created by osarapulov on 25.06.21 9:26
  */
-interface CountriesRemoteDataSrouce {
+interface CountriesRemoteDataSource {
     suspend fun getCountries(countriesUrl: String): List<String>
 }
