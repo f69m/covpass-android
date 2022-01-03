@@ -4,7 +4,7 @@
 <!-- Language: en -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
 	<!-- SECTION: app -->
-	<string name="validator_app_name">CovPass Check</string>
+	<string name="validator_app_name">Covid Check</string>
 
 	<!-- SECTION: onboarding -->
 	<string name="start_onboarding_title">Welcome to the CovPassCheck app</string>
