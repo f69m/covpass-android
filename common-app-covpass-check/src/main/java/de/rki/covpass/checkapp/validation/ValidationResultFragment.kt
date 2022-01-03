@@ -24,6 +24,7 @@ import de.rki.covpass.sdk.utils.formatDateTime
 import de.rki.covpass.sdk.utils.hoursTillNow
 import de.rki.covpass.sdk.utils.toDeviceTimeZone
 import kotlinx.parcelize.Parcelize
+import java.time.Period
 import java.time.ZonedDateTime
 
 /**
@@ -120,6 +121,8 @@ internal class ValidationResultSuccessNav(
     val name: String,
     val transliteratedName: String,
     val birthDate: String,
+    val vaccinationPeriod: Period?,
+    val isBooster : Boolean,
 ) : FragmentNav(ValidationResultSuccessFragment::class)
 
 /**
@@ -142,8 +145,27 @@ internal class ValidationResultSuccessFragment : ValidationResultFragment() {
     }
     override val imageInfo1Res = R.drawable.result_person
 
+    override val titleInfo2 by lazy {
+        if (args.isBooster) {
+            getString(R.string.validation_check_popup_valid_booster)
+        } else {
+            getString(R.string.validation_check_popup_valid_vaccination_recovery)
+        }
+    }
+    override val textInfo2 by lazy {
+        if (args.vaccinationPeriod != null) {
+            getString(R.string.validation_check_popup_valid_vaccination_date,
+                args.vaccinationPeriod?.months, args.vaccinationPeriod?.days)
+        } else ""
+    }
+    override val imageInfo2Res = R.drawable.result_calendar
+
     override val textFooter by lazy {
-        getString(R.string.validation_check_popup_valid_vaccination_recovery_note)
+        if (args.isBooster) {
+            getString(R.string.validation_check_popup_valid_booster_note)
+        } else {
+            getString(R.string.validation_check_popup_valid_vaccination_recovery_note)
+        }
     }
 
     override val buttonTextRes = R.string.validation_check_popup_valid_vaccination_button_title

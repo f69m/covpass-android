@@ -75,7 +75,11 @@
 	<string name="validation_check_popup_valid_vaccination_recovery_title">Zertifikat gültig*</string>
 	<string name="validation_check_popup_valid_vaccination_recovery_message">Gleichen Sie jetzt folgende Daten mit einem Ausweisdokument der geprüften Person ab.</string>
 	<string name="validation_check_popup_valid_vaccination_date_of_birth">Geboren am %s</string>
+	<string name="validation_check_popup_valid_vaccination_date">Seit %d Monaten und %d Tagen</string>
+	<string name="validation_check_popup_valid_vaccination_recovery">Vollständig geimpft oder genesen</string>
+	<string name="validation_check_popup_valid_booster">Auffrischungsimpfung</string>
 	<string name="validation_check_popup_valid_vaccination_recovery_note">* Genesenen- oder Impfzertifikat liegt vor.</string>
+	<string name="validation_check_popup_valid_booster_note">* Zertifikat für Auffrischungsimpfung liegt vor.</string>
 	<string name="technical_validation_check_popup_unsuccessful_certificate_title">Zertifikat nicht gültig</string>
 	<string name="technical_validation_check_popup_unsuccessful_certificate_subline">Das geprüfte Zertifikat ist aus einem der folgenden Gründe nicht gültig:</string>
 	<string name="technical_validation_check_popup_unsuccessful_certificate_signature_subheading">Ungültige Signatur</string>
